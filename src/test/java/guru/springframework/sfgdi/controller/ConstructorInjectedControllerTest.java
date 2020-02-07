@@ -1,12 +1,9 @@
 package guru.springframework.sfgdi.controller;
 
-import guru.springframework.sfgdi.services.GreetingServiceImpl;
-import guru.springframework.sfgdi.services.IGreetingService;
+import guru.springframework.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectedControllerTest {
 
@@ -16,7 +13,7 @@ class ConstructorInjectedControllerTest {
     /*Before anything happens in the program, set up is done!!!*/
     @BeforeEach
     void setUp() {
-        cont = new ConstructorInjectedController(new GreetingServiceImpl());
+        cont = new ConstructorInjectedController(new ConstructorGreetingService());
 
     }
 
