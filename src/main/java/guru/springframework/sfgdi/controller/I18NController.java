@@ -1,6 +1,7 @@
 package guru.springframework.sfgdi.controller;
 
 import guru.springframework.sfgdi.services.IGreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -9,7 +10,7 @@ public class I18NController {
     private final IGreetingService iGreetingService;
 
 
-    public I18NController(IGreetingService iGreetingService) {
+    public I18NController(@Qualifier("language") IGreetingService iGreetingService) {
         this.iGreetingService = iGreetingService;
     }
 
