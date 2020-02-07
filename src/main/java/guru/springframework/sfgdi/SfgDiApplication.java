@@ -18,7 +18,7 @@ public class SfgDiApplication {
 
         System.out.println("Primary Bean: ");
         System.out.println(ctrl.sayHello());
-
+        //If @Qualifier is not mentioned on the dependency injection, the primary runs all over.
         System.out.println("+++++==Property==++++");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
         System.out.println(propertyInjectedController.getGreeting());
